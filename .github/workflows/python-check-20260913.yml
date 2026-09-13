@@ -1,0 +1,10 @@
+name: Guessing Game Python Check
+on:
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m py_compile tests/range_validation.py tests/repository_smoke.py
